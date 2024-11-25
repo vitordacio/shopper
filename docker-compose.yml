@@ -33,5 +33,18 @@ services:
       - ./shopper-api:/app
     command: ["sh", "-c", "npm run migration:run && npm run start"]
 
-volumes:
-  db_data:
+  frontend:
+    build:
+      context: ./shopper-app
+      args:
+        VITE_GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+    container_name: frontend
+    ports:
+      - "80:80"
+    environment:
+      VITE_GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+    depends_on:
+      - backend
+    volumes:
+      - ./shopper-app:/app
+      - /app/node_modules

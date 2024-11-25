@@ -42,4 +42,10 @@ export class RideController {
       driver_id,
     );
   }
+
+  @HttpCode(HttpStatus.OK)
+  @Get('drivers/all')
+  async findAllDrivers() {
+    return await this.rideService.findAllDrivers();
+  }
 }

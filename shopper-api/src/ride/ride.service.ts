@@ -73,6 +73,11 @@ export class RideService {
     }
   }
 
+  async findAllDrivers() {
+    const drivers = await this.driverService.findAll();
+    return this.driverService.formateToDto(drivers);
+  }
+
   async estimate(body: EstimateRideDto) {
     let ride_option: RideOptionEntity;
     const { origin, destination } = body;

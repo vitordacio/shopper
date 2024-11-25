@@ -1,0 +1,45 @@
+.ride-options {
+  padding: 16px;
+  align-items: center;
+  color: #eee;
+}
+
+.map-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.map-container > img {
+  max-width: 100%;
+}
+
+.driver-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px 0;
+}
+
+.driver-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  gap: 2px;
+}
+
+.driver-card button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-driver-error {
+  color: rgb(255, 72, 72);
+  margin-top: 8px;
+}

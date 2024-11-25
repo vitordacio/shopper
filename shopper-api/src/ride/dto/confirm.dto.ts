@@ -25,7 +25,7 @@ class ConfirmDriverDto {
 }
 
 export class ConfirmRideDto {
-  @IsString({ message: 'O ID do cliente deve ser um número válido' })
+  @IsString({ message: 'O ID do cliente deve ser um texto válido' })
   customer_id: string;
 
   @IsString()
